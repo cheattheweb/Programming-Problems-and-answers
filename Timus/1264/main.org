@@ -15,7 +15,7 @@ Output the weight of thorium sulphide in nanogramms needed for the processing.
 ** Sample
 | Input | Output |
 |-------+--------|
-| 5 2 3 |     60 |
+| 5  2 3 |     60 |
 * Solution
 ** Header Files
 We will only use the stdio header file for this problem.

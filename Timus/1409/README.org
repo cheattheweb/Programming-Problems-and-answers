@@ -1,0 +1,43 @@
+#+TITLE: Timus 1409 Two Gangsters
+#+AUTHOR: Arka Barua
+#+PROPERTY: header-args :tangle main.c
+#+DATE:Sat Dec 10 10:57:42 2022
+
+* Problem Description
+
+Two gangsters Harry and Larry had a rest at countryside. They decided to spend some time shooting, so they put several beer cans (no more than 10) on a log. Harry started to shoot cans one after another from the leftmost to the right and Larry – from the rightmost to the left. At some moment it happened so that they shot one and the same can.
+Harry got indignant and claimed that Larry owed him a considerable sum of money because Larry deprived him of shooting some more cans. Larry became furious and told Harry that he owed even greater sum of money to Larry because of the same reason. They started to argufy but nobody remembered how many cans there were at the very beginning. And no one of them was going to search cans which was shot. Anyway, each of them remembered exactly how many cans he shot.
+Determine how many cans were not shot by Harry and how many cans were not shot by Larry.
+** Input
+The only input line contains two integers — the number of cans shot by Harry and by Larry respectively.
+** Output
+two integers — the number of cans that were not shot by Harry and the number of cans that were not shot by Larry, respectively.
+** Sample
+| Input | Output |
+|-------+--------|
+| 4  7  | 6  3   |
+
+* Solution
+** Header Files
+#+begin_src c
+#include<stdio.h>
+#+end_src
+** Cans Function
+If Harry and Larry both shot *a* and *b* cans respectively. Then, the total number of cans are *(a + b) - 1* because they shot the same can at the end.
+#+begin_src c
+int cans(int a, int b){
+    return (a + b) - 1;
+    }
+#+end_src
+** Main Function
+In the main function we will know how many cans Harry and Larry didn't shot.
+#+begin_src c
+int main(){
+
+    int a , b;
+    scanf("%d %d",&a, &b);
+    int total = cans(a,b);
+    printf("%d %d\n",total - a,total - b);
+    return 0;
+    }
+#+end_src
