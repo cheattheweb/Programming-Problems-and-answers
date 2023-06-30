@@ -2,25 +2,32 @@
 
 int main() {
 
-  int arr[3], arr_1[3], temp, i, j;
-  for (int i = 0; i < 3; i++) {
-    scanf("%d", &arr[i]);
-  }
-  arr_1[0] = arr[0];
-  arr_1[1] = arr[1];
-  arr_1[2] = arr[2];
+  int a, b, c, temp, arr_1[3];
+  scanf("%d %d %d", &a, &b, &c);
 
-  for (i = 0; i < 3; i++) {
-    for (j = 0; j < 3; j++) {
-      if (arr[j + 1] < arr[j]) {
-        temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-        break;
-      }
-    }
+  arr_1[0] = a;
+  arr_1[1] = b;
+  arr_1[2] = c;
+
+  // Bubble sort
+  if (a > b) {
+    temp = a;
+    a = b;
+    b = temp;
   }
-  printf("%d\n%d\n%d\n\n", arr[0], arr[1], arr[2]);
+
+  if (b > c) {
+    temp = b;
+    b = c;
+    c = temp;
+  }
+
+  if (a > b) {
+    temp = a;
+    a = b;
+    b = temp;
+  }
+  printf("%d\n%d\n%d\n\n", a,b,c);
   printf("%d\n%d\n%d\n", arr_1[0], arr_1[1], arr_1[2]);
 
   return 0;
