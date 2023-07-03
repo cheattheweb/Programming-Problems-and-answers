@@ -4,16 +4,21 @@ using namespace std;
 
 int main() {
   double x, y;
-  while (1) {
+  do {
     cin >> x;
-    if (x > 10) {
-      break;
+    if (x < 0 || x > 10) {
+      cout << "nota invalida" << endl;
     }
-    cout <<  "nota invalida" << endl;
-  }
+  } while (x < 0 || x > 10);
 
-  cin >> y;
-  printf("media = %.2f\n", (x + y) / 2);
+  do {
+    cin >> y;
+    if (y < 0 || y > 10) {
+      cout << "nota invalida" << endl;
+    }
+  } while (y < 0 || y > 10);
+
+  printf("media = %.2lf", (x + y) / 2);
 
   return 0;
 }
