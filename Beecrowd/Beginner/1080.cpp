@@ -13,5 +13,7 @@ int main(){
             position = i;
                 }
             }
+    cout << max << endl;
+    cout << position << endl;
     return 0;
 }
