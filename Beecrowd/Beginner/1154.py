@@ -7,6 +7,5 @@ while True:
     sum += age
     i += 1
 
-print(sum / i)
-#print(f"")
+print("%.2f" %(sum / i))
 
