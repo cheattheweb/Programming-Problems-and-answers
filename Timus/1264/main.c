@@ -1,13 +1,13 @@
 #include<stdio.h>
 
-int calcualte(int n, int a, int b)
+int calcualte(int a, int b)
 {
-    return n * a * b * 2;
+    return  a * b;
 }
 
 int main() {
-  int n, a, b;
-  scanf("%d %d %d", &n, &a, &b);
-  printf("%d\n", calcualte(n, a, b));
+  int  a, b;
+  scanf("%d %d",&a, &b);
+  printf("%d\n", calcualte( a, b+1));
   return 0;
 }
