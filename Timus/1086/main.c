@@ -1,14 +1,22 @@
 #include<stdio.h>
 
 int is_prime(int x) {
-  for (int i = 2; i < x; i++) {
 
-    if (x % i == 0)
-      return 0;
+  int flag = 1, j = 2;
+  for (;j < (x / 2 + 1); j++ ) {
+   if (x % j == 0) {
+     flag = 0;
+     break;
+   }
   }
+  if (flag == 0) {
+    return 0;
+  }else {
   return 1;
+  }
 }
 
+// this block of code will pass the time limite
 int n_prime(int y) {
 
   int i = 2;
